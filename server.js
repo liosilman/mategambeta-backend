@@ -41,6 +41,9 @@ app.use((err, req, res, next) => {
     error: err.message || "Internal server error",
   })
 })
+app.get("/", (req, res) => {
+  res.send("API de Mate & Gambeta funcionando correctamente ✅");
+});
 
 // 🟢 Exportar la app para que Vercel la use como serverless function
 export default app
